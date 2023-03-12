@@ -143,11 +143,40 @@ html {
   max-height: 100vh;
 }
 
-#accordion label+input[type="radio"]:hover+.accordion__span {
-  transform: rotate(45deg);
-}
-
 .accordion__img {
   width: 40%;
   object-fit: contain;
+}
+
+//media
+
+@media (max-width: 1000px) {
+  .accordion__item {
+    font-size: 1.5rem;
+  }
+
+  .accordion__span {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .accordion__item {
+    font-size: 1.3rem;
+  }
+
+  .accordion__span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .accordion__item {
+    font-size: 1rem;
+  }
+
+  .accordion__span {
+    font-size: 1rem;
+  }
 }
