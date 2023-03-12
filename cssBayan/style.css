@@ -152,6 +152,12 @@ html {
      object-fit: contain;
 }
 
+@media (hover: hover) and (max-width: 1000px) {
+  #accordion label + input[type="radio"]:hover + .accordion__desc {
+    max-height: 0vh;
+  }
+}
+
 @media (max-width: 1000px) {
   .accordion__item {
     font-size: 1.5rem;
