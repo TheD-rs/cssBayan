@@ -8,23 +8,35 @@
   <title>meme</title>
 </head>
 <body>
-  <div class="container">
-    <div class="accordion">
-      <div class="accordion__item">
-        <label for="accordion__id" class="accordion__title">Фикс Серёге.</label>
-        <input checked name="accordion__name" id="accordion__id" class="accordion__input" type="radio">
-        <div class="accordion__desc">
-          <img class="accordion__img" src="img/1.webp" alt="img">
-        </div>
+  <ul id="accordion">
+    <li class="accordion__item">
+      <label class="accordion__label" for="first__item">Фикс Серёге.<span class="accordion__span">&#x3e;</span></label>
+      <input checked type="radio" name="accordion" id="first__item">
+      <div class="accordion__desc">
+        <img class="accordion__img" src="img/1.webp" alt="img">
       </div>
-      <div class="accordion__item">
-        <label for="accordion__id-2" class="accordion__title">Очки нннада?</label>
-        <input name="accordion__name" id="accordion__id-2" class="accordion__input" type="radio">
-        <div class="accordion__desc">
-          <img class="accordion__img" src="img/2.webp" alt="img">
-        </div>
+    </li>
+    <li class="accordion__item">
+      <label class="accordion__label" for="second__item">Очки нннада?<span class="accordion__span">&#x3e;</span></label>
+      <input type="radio" name="accordion" id="second__item">
+      <div class="accordion__desc">
+        <img class="accordion__img" src="img/2.webp" alt="img">
       </div>
-    </div>
-  </div>
+    </li>
+    <li class="accordion__item">
+      <label class="accordion__label" for="third__item">Товарищ Си<span class="accordion__span">&#x3e;</span></label>
+      <input type="radio" name="accordion" id="third__item">
+      <div class="accordion__desc">
+        <img class="accordion__img" src="img/3.webp" alt="img">
+      </div>
+    </li>
+    <li class="accordion__item">
+      <label class="accordion__label" for="four__item">Привет Алиса<span class="accordion__span">&#x3e;</span></label>
+      <input type="radio" name="accordion" id="four__item">
+      <div class="accordion__desc">
+        <img class="accordion__img" src="img/4.webp" alt="img">
+      </div>
+    </li>
+  </ul>
 </body>
 </html>

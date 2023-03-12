@@ -95,53 +95,59 @@ html {
 
 //////start
 
-
-.accordion {
+#accordion {
   max-width: 50%;
   margin: 0 auto;
   margin-top: 5%;
-
-  // .accordion__item
-  &__item {
-    border: 0.1rem solid #000;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  // .accordion__title
-  &__title {
-    display: block;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
-
-  // .accordion__input
-  &__input {
-    display: none;
-
-    &:checked~.accordion__desc {
-      max-height: 100vh;
-      transition: all 1s;
-    }
-
-  }
-
-  // .accordion__desc
-  &__desc {
-    text-align: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s;
-  }
-
-  // .accordion__img
-  &__img {
-    max-width: 50%;
-    object-fit: contain;
-  }
 }
 
-.accordion__item:hover .accordion__desc {
+.accordion__item {
+  border: 0.1rem solid #000;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.accordion__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+.accordion__span {
+  transform: rotate(90deg);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.accordion__desc {
+  text-align: center;
+}
+
+#accordion label+input[type="radio"] {
+  display: none;
+}
+
+#accordion .accordion__desc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+}
+
+#accordion label+input[type="radio"]:checked+.accordion__desc {
   max-height: 100vh;
-  transition: all 1s;
+}
+
+#accordion label+input[type="radio"]:hover+.accordion__desc {
+  max-height: 100vh;
+}
+
+#accordion label+input[type="radio"]:hover+.accordion__span {
+  transform: rotate(45deg);
+}
+
+.accordion__img {
+  width: 40%;
+  object-fit: contain;
 }

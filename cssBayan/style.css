@@ -90,7 +90,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.accordion {
+#accordion {
   max-width: 50%;
   margin: 0 auto;
   margin-top: 5%;
@@ -102,39 +102,58 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.accordion__title {
-  display: block;
+.accordion__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 1.5rem;
 }
 
-.accordion__input {
-  display: none;
-}
-
-.accordion__input:checked ~ .accordion__desc {
-  max-height: 100vh;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+.accordion__span {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .accordion__desc {
   text-align: center;
+}
+
+#accordion label + input[type="radio"] {
+  display: none;
+}
+
+#accordion .accordion__desc {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: max-height 0.5s linear;
+  transition: max-height 0.5s linear;
+}
+
+#accordion label + input[type="radio"]:checked + .accordion__desc {
+  max-height: 100vh;
+}
+
+#accordion label + input[type="radio"]:hover + .accordion__desc {
+  max-height: 100vh;
+}
+
+#accordion label + input[type="radio"]:hover + .accordion__span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .accordion__img {
-  max-width: 50%;
+  width: 40%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.accordion__item:hover .accordion__desc {
-  max-height: 100vh;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 /*# sourceMappingURL=style.css.map */
