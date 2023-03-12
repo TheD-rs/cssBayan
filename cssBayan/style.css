@@ -100,6 +100,7 @@ html {
   border: 0.1rem solid #000;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: blue;
 }
 
 .accordion__label {
@@ -125,6 +126,7 @@ html {
 
 .accordion__desc {
   text-align: center;
+  cursor: pointer;
 }
 
 #accordion label + input[type="radio"] {
@@ -144,6 +146,17 @@ html {
 
 #accordion label + input[type="radio"]:hover + .accordion__desc {
   max-height: 100vh;
+}
+
+.accordion__item:active .accordion__label {
+  -webkit-filter: blur(0.1rem);
+          filter: blur(0.1rem);
+  color: #50085a;
+}
+
+.accordion__item:active .accordion__desc img {
+  -webkit-filter: blur(0.1rem);
+          filter: blur(0.1rem);
 }
 
 .accordion__img {
